@@ -1,126 +1,112 @@
-/* Colors 
-Methodology, section 1 (header, background): #2a4359
-Methodology, section 1 (header, boxes): #6da6a6
-Methodology, section 2 (methodology, background): #466fa6
-Methodology, section 2 (methodology, boxes): #8badd9
+/* Colors */
+/* Rainy theme 5 -Green Digitalization Course and Students Apps-:
+Navbar (background): #8bbbd9
+Navbar (a hover): #466fa6
+Navbar (logo): #568c63
+Navbar (a menu): #2a4359
 */
 
-/* Utilities  */
+/* Google fonts Roboto  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+/* CSS utilities */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  line-height: 1.6;
+}
+.container {
+  margin: auto;
+  max-width: 1320px;
+}
+ul { 
+  list-style: none;
+  font-size: 400;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+h1, h2 {
+  font-weight: 400;
+  line-height: 1.2;
+}
 p {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 14px;
 }
-h4 {
-  font-size: 18px;
-  text-align: left;
-  font-weight: bold;
+img {
+  width: 100%;
 }
-ol {
-  font-size: 18px;
+/* Navbar  */
+.section_carbon_app_navbar {
+  background-color:#8bbbd9;
 }
-/* Section header */
-.section_header_methodology {
-  background-color:#2a4359;
-}
-.header {
-  display: flex;  
-  align-items: start;
-  background: #2a4359;
-}
-.header .box {
-  flex: 1;
-  background: #2a4359;
-  color: #fff;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-.header .box:nth-of-type(1) {
-  flex-grow:2;
-}
-.header .box:nth-of-type(2) {
-  flex-grow:1;
-}
-.container_buttons_links_header {
+.carbon_app_navbar {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 70px;
   align-items: center;
-  flex-wrap:wrap;
+  background-color: #8bbbd9;
+  padding: 0 0px;
 }
-.container_buttons_links_header a:hover {
+.carbon_app_navbar a {
   color: #2a4359;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 20px;
+  text-decoration: none;
 }
-.container_buttons_links_header btn {
-  width: 100px;
-  height: 100px;
-  background: #2a4359;
-  color: #fff;
+.carbon_app_navbar a:hover{
+  border-bottom: #2a4359 4px solid;
+}
+.carbon_app_navbar ul {
   display: flex;
-  justify-content:center;
-  align-items:center;
+  flex-direction: row;
 }
-/* Section methodology */
-.section_body_methodology {
-  background-color:#466fa6;
+.carbon_app_navbar .logo {
+  font-weight: 400;
 }
-.methodology {
-  display: flex;  
-  align-items: start;
-  background: #466fa6;
+.text-logo {
+  color: #568c63;
 }
-/* Table with one column */
-.methodology .box_table1 {
-  flex: 1;
-  background: #8badd9;
-  color: black;
-  border-radius: 10px;
-  margin: 10px 10px 10px 10px;
-  padding: 15px 15px;
-  text-align:center;
-  align-items: center;
+/* Footer  */
+.section_footer{
+  background-color:#8bbbd9;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-}
-.methodology .box_table1:nth-of-type(1) {
-  flex-grow:1;
-  background: #466fa6;
-}
-.methodology .box_table1:nth-of-type(2) {
-  flex-grow:4;
-}
-.methodology .box_table1:nth-of-type(3) {
-  flex-grow:1;
-  background: #466fa6;
-}
-/* Table with two columns */
-.methodology .box_table2 {
-  flex: 1;
-  background: #8badd9;
-  color: black;
-  border-radius: 10px;
-  margin: 10px 10px 10px 10px;
-  padding: 15px 15px;
-  text-align:center;
+  height: 70px;
   align-items: center;
-  justify-content: center;
-}
-.methodology .box_table2:nth-of-type(1) {
-  flex-grow:1;
-  background: #8badd9;
-}
-.methodology .box_table2:nth-of-type(2) {
-  flex-grow:1;
-  background: #8badd9;
+  background-color: #8bbbd9;
+  padding: 0 0px;
 }
 
 
-@media (max-width:768px) { 
-  .header {
+/* Media query */
+@media(max-width:768px){
+  .carbon_app_navbar {
+    height: 180px;
     flex-direction: column;
-  } 
-  .methodology {
+  }
+  .carbon_app_navbar a {
+    font-size: 15px;
+    padding: 5px 20px;
+  }
+  .carbon_app_navbar ul {
+    display: flex;
     flex-direction: column;
-  } 
+  }
+  .carbon_app_navbar a:hover{
+    color: #568c63;
+    border-bottom: #2a4359 2px solid;
+  }
 }
