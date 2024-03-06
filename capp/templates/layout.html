@@ -39,34 +39,31 @@
         
     </head>
     <body>
-        <section class="section_carbon_app_navbar">
-          <div class="container">
-            <div class="carbon_app_navbar">
-              <h1 class="logo">
-                <span class="text-logo"><i class="fa-solid fa-leaf"></i> Carbon</span> App
-              </h1>
-              <nav>
-                <ul>
-                    <li>
-                      <a href="{{url_for('users.register')}}">Register</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('users.login')}}">Login</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('carbon_app.carbon_app_home')}}">Carbon App</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('methodology.methodology_home')}}">Methology</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
-                    </li>
-                </ul>
-              </nav> 
-            </div>
+      <section class="section_carbon_app_navbar"
+        <div class="container">
+          <div class="carbon_app_navbar">
+            <h1 class="logo">
+              <a href="{{url_for('carbon_app.carbon_app_home')}}"><span class="text-logo"><i class="fa-solid fa-calculator"></i> </span> </a>
+            </h1>
+            <nav>
+               <ul>
+                <li>
+                 <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                </li>
+                <li>
+                  <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
+                </li>
+                <li>
+                  <a href="{{url_for('users.login')}}">Login</a>
+                </li>
+                <li>
+                  <a href="{{url_for('users.register')}}">Register</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-        </section>
+        </div>
+      </section>  
 
         {% block content %} {% endblock %}
 
