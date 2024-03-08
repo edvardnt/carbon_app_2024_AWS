@@ -82,8 +82,9 @@ ol {
   border-radius: 60px;
   margin: 10px 10px 5px 5px;
   padding: 10px 10px;
-  text-align:center;
-  align-items: center;
+  list-style: none;
+  text-align: start;
+  align-items: end;
   justify-content: center;
 }
 .methodology .box_table2:nth-of-type(1) {
@@ -104,3 +105,4 @@ ol {
     flex-direction: column;
   } 
 }
+
