@@ -10,63 +10,25 @@ p {
   margin: 10px 0;
   font-size: 18px;
 }
-/* Section header_home */
-.section_header_home {
-  background-color:#9fa7bf;
-}
-.header_home {
-  display: flex;  
-  align-items: start;
-  background: #9fa7bf;
-}
-.header_home .box {
-  flex: 1;
-  background: #9fa7bf;
-  color: #fff;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-}
-.header_home .box:nth-of-type(1) {
-  flex-grow:2;
-}
-.header_home .box:nth-of-type(2) {
-  flex-grow:1;
-}
-.container_buttons_links_header_home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
-}
-.container_buttons_links_header_home a:hover {
-  color: #9fa7bf;
-}
-.container_buttons_links_header_home btn {
-  width: 100px;
-  height: 100px;
-  background: #9fa7bf;
-  color: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-}
+
 /* Section developers */
 .section_developers {
-  background-color:#c5c8d9;
+  background-color:#2a4359;
+  color: #fff;
+  padding: 20px;
+  margin: 20px 20px;
+  margin-bottom: 0%;
 }
+
 .developers {
   display: flex;  
   align-items: start;
-  background: #c5c8d9;
+  background: #2a4359;
 }
 .developers .box {
   flex: 1;
-  background: #49736f;
-  color: black;
+  background: rgba(76, 127, 182, 0.923) ;
+  color: white;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -85,12 +47,23 @@ p {
 }
 .developers .box2 {
   flex: 1;
-  background: #49736f;
-  color: black;
+  background: rgba(76, 127, 182, 0.923);
+  color: white;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
   text-align:center;
+  align-items: center;
+  justify-content: center;
+}
+.developers .box3 {
+  flex: 1;
+  background: rgba(76, 127, 182, 0.923);
+  color: white;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -119,16 +92,16 @@ p {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #49736f;
-  border: 2px solid  #c5c8d9;
+  background-color: #2a4359;
+  border: 0px solid  #c5c8d9;
+  padding: 10px;
 }
 .btn_developers:hover {
   color: #fff;
-  background-color: #c5c8d9;
+  background-color: #b9bac0;
   border: 2px solid #c5c8d9;
   text-decoration: none;
 }
-
 
 @media (max-width:768px) { 
   .header_home {
