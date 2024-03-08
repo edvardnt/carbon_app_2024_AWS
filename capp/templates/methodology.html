@@ -9,7 +9,7 @@
         <div class="box"> 
           <h1 style="font-size:55px;"><span class="text-logo"> Methodology</span></h1>
           <p style="text-align:left;">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
+            Methodology is the philosophical evaluation of how knowledge and inquiry are framed within an academic discipline or school of thought (Oxford Reference, n.d). The methodology set the standard of what we want to achieve through our app: raising awareness about the carbon emissions that vehicles inflict on the environment. Therefore our app will provide a calculator that tracks the carbon emissions produced by different vehicles. If you need a more comprehensive methodology, please read our paper through the button below.
           </p>
           <div class="container_buttons_links_header">
             <div class="btn">
@@ -53,8 +53,6 @@
                             Air emissions from traffic vary depending on factors such as the vehicle type and fuel used. In the following, we will provide an overview of emission factors for various vehicles and traffic situations (Fedoryshyn, 2017). Our application will be based on one general formula. 
                             <br><br>
                         \( 𝐶𝑂2 = 𝑑 · 𝑒𝑓/𝑝 \)
-                            
-                    
                         </p>
                     </li>
                 </ol>                        
@@ -64,10 +62,9 @@
                     <li>
                         <h4>Formula for electrical vechicle </h4>
                         <p class="text-left">
-                            For electrical vechicle \( 𝑑 ∗ 26 ∗ 𝑒𝑐/p \) .
-                            <br>
                             The carbon intensity referred to in grams CO2/kwh in this formula (26 grams) is based on the carbon intensity in the western part of Norway (Electricity maps, 2023). We use data from the western part of Norway since this is where our target audience is based. For the energy consumption in kWh/km we use data from the average electric cars energy consumption, 0,194 kWh/km ( Ev-database, 2023)
-
+                            <br></br>
+                            \(CO2: 𝑑 ∗ 26 ∗ 𝑒𝑐/p \) 
                         </p>
                     </li>
                 </ol>
@@ -81,13 +78,28 @@
                     <li>
                         <h4>Car</h4>
                         <p class="text-left">
-                           
+                        Old:
+                        <Ul>
+                            <li>Petrol car: 156,47g/km</li>
+                            <li>Diesel car: 130,09g/km</li>
+                        </Ul>
+                        </p>
+                        <p class="text-left">
+                        New:
+                        <Ul>
+                            <li>Petrol car: 139g/km</li>
+                            <li>Diesel car: 122,39g/km</li>
+                        </Ul>
                         </p>
                     </li>
                     <li>
                         <h4>EL-car</h4>
                         <p class="text-left">
-                            
+                            <Ul>
+                                <li>Small car: 12g/km</li>
+                                <li>Medium car: 16g/km</li>
+                                <li>Large car: 20g/km</li>
+                            </Ul>
                         </p>
                     </li>
                    
@@ -106,7 +118,9 @@
                             <li>Business class: 306 g/km</li>
                             <li>First class: 408 g/km</li>
                             </ul>
-                         Domestic and other short-haul flights:
+                        </p>
+                        <p class="text-left">
+                        Domestic and other short-haul flights:
                             <ul>
                             <li>Economy class: 133 g/km</li>
                             <li>Business class: 399 g/km</li>
@@ -134,7 +148,7 @@
                     <li>
                         <h4>EL-Ferry</h4>
                         <p class="text-left">
-                            Energy consumption for e-ferry (Ellen) is 1600 kWh/22 nm (40km). The total capacity of the ferry is 198 passengers and 147 in the winter. The e-ferry uses 40 kWh/pkm (1600/40 = 40). Then we need to divide this into 198 passengers (40/198 = 0,2020) which will leave us with 0,2020 kWh/pkm. We can then use a formula to convert the kWh to CO2. Formula:  CO2 pkm (grams) = carbon intensity * kWh/pkm26*0,2020 = 5,25g CO2/pkm
+                            Energy consumption for e-ferry (Ellen) is 1600 kWh/22 nm (40km). The total capacity of the ferry is 198 passengers. The e-ferry uses 40 kWh/pkm (1600/40 = 40). Then we need to divide this into 198 passengers (40/198 = 0,2020) which will leave us with 0,2020 kWh/pkm. We can then use a formula to convert the kWh to CO2. Formula: CO2 pkm (grams) = carbon intensity* kWh/pkm -> 26*0,2020 = 5,25g CO2/pkm
 
                         </p>
                     </li>
@@ -147,16 +161,13 @@
                         <p class="text-left">
                             In 2021, traveling by train emitted 12.2 grams of CO2 per passenger kilometer, making it the most environmentally friendly option in Norway.
                         </p>
-                        <br>
-                        The following numbers provide approximations of the amount of carbon dioxide (CO2) emissions per passenger kilometer (pkm) generated when travelling by train in 2023. These emissions vary by both country and type of fuel. 
-                        <br></br>
+                        
                         <ul>
                            <li> Diesel Train European average: 91g CO2/pkm </li>
                            <li> Electric Train European average: 24g CO2/pkm</li>
                            <li> Electric Train in the Nordic Countries: 7g CO2/pkm </li>
-                            <br/>
                     </li>
-                    </li>
+            
                    
                 </ol>
             </div>  
@@ -169,13 +180,17 @@
                     <li>
                         <h4>Buss</h4>
                         <p class="text-left">
-                        
+                        The following numbers are estimated gas emissions in 2023:
+                        <ul>
+                            <li>European average diesel: 25 gram CO2/pkm</li>
+                            <li>Average biodiesel: 7 gram C02/pkm</li>
+                        </ul>  
                         </p>
                     </li>
                     <li>
                         <h4>EL-Buss</h4>
                         <p class="text-left">
-                            
+                           
                         </p>
                     </li>
                     
@@ -203,3 +218,4 @@
 </section>
 
 {% endblock content %}
+
