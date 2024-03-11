@@ -18,16 +18,16 @@ h4 {
 }
 /* Section header */
 .section_header_carbon_app {
-  background-color:#466fa6;
+  background-color:#2a4359;
 }
 .header_carbon_app {
   display: flex;  
   align-items: start;
-  background: #466fa6;
+  background: #2a4359;
 }
 .header_carbon_app .box {
   flex: 1;
-  background: #466fa6;
+  background: #2a4359;
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
