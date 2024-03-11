@@ -49,7 +49,7 @@ body {
 	margin: 0;
 	background: #c6c3c354;
 	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+	font-weight: 400;
 }
 
 .carbon_app_navbar {
@@ -59,7 +59,16 @@ body {
   height: 70px;
   align-items: center;
   background-color: #c6c3c354;
-  padding: 0 0px;
+  padding: 0px 0px;
+}
+
+.carbon_app_navbar a {
+  margin-left: 335px;
+  place-items: center;
+}
+
+.carbon_app_navbar ul li a {
+  margin: 0px;
 }
 
 .container {
@@ -77,23 +86,13 @@ header::after {
   clear: both;
 }
 
-.logo {
-  float: left;
-  padding: 100px 250px;
-}
-
-nav {
-  float: inline-start;
-}
-
 nav ul {
-  margin: 10;
-  padding: 100px 100px;
+  display: flex;
   list-style: none;
 }
 
 nav li {
-  display: inline-flex;
+  display: inline;
   margin-left: 70px;
   padding-top: 20px;
 
@@ -146,19 +145,26 @@ nav a:hover::before {
 /* Media query */
 @media(max-width:768px){
   .carbon_app_navbar {
-    height: 180px;
-    flex-direction: column;
-  }
-  .carbon_app_navbar a {
-    font-size: 15px;
-    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
   }
   .carbon_app_navbar ul {
-    display: flex;
+    display: block;
     flex-direction: column;
   }
-  .carbon_app_navbar a:hover{
-    color: #568c63;
-    border-bottom: #2a4359 2px solid;
+
+  .carbon_app_navbar ul li a {
+    font-size: 15px;
+    display: block;
+    flex-direction: column;
+    margin-left: 65px;
   }
+  .carbon_app_navbar a {
+    margin-left: 125px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
