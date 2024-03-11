@@ -11,6 +11,12 @@ p {
   font-size: 18px;
 }
 
+/* Section header */
+.section_header_about {
+  background-color: #2a4359;
+}
+
+
 /* Section developers */
 .section_developers {
   background-color:#2a4359;
