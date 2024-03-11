@@ -9,14 +9,16 @@ Methodology, section 2 (methodology, boxes): #8badd9
 p {
   margin: 10px 0;
   font-size: 18px;
+  font-weight: 100;
 }
 h4 {
   font-size: 18px;
   text-align: left;
-  font-weight: bold;
+  font-weight: 100;
 }
 ol {
   font-size: 18px;
+  font-weight: 100;
 }
 /* Section header */
 .section_header_methodology {
