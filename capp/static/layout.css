@@ -128,9 +128,6 @@ nav a:hover::before {
 }
 
 /* Footer  */
-.section_footer{
-  background-color:#c6c3c354;
-}
 .footer {
   display: flex;
   flex-direction: row;
