@@ -30,7 +30,7 @@ ol {
 .header .box {
   flex: 1;
   background: #2a4359;
-  color: #fff;
+  color: rgb(216, 211, 211);
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -57,7 +57,7 @@ ol {
   width: 100px;
   height: 100px;
   background: #2a4359;
-  color: #fff;
+  color: rgb(216, 211, 211);
   display: flex;
   justify-content:center;
   align-items:center;
@@ -65,12 +65,17 @@ ol {
 /* Section methodology */
 .section_body_methodology {
   background-color: #2a4359;
-  color: white;
+  color:rgb(216, 211, 211) ;
+  margin: 20px 20px;
+  margin-bottom: 0px;
 }
 .methodology {
   display: flex;  
   align-items: center;
   background: #2a4359;
+  margin: 20px 20px;
+  margin-bottom: 0px;
+  padding: 10px;
 }
 
 
@@ -78,9 +83,9 @@ ol {
 .methodology .box_table2 {
   flex: 1;
   background: rgba(76, 127, 182, 0.923);
-  color: black;
-  border-radius: 60px;
-  margin: 10px 10px 5px 5px;
+  color: rgb(216, 211, 211);
+  border-radius: 45px;
+  margin: 10px 10px 10px 5px;
   padding: 10px 10px;
   list-style: none;
   text-align: start;
