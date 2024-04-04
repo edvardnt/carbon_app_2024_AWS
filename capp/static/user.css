@@ -1,13 +1,11 @@
-  /*Container register header*/
+    /*Container register header*/
 /*color=dark*/
 .register_section_css {
   display: flex;
-  background: #2a4359;
   }
   
   .register_section_css .container {
   display: flex;
-  background: #2a4359;
   }
   
   .register_section_css .container {
@@ -18,27 +16,24 @@
       /*color=dark*/
   .register_section_css .container .box {
     flex: 1;
-    background: #2a4359;
-    color: #fff;
-    border-radius: 2px;
-    margin: 20px 10px;
-    padding: 15px 20px;
+    color: #580707;
+    border-radius: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
     text-align:center;
   }
   
   .register_section_css .container  .box:nth-of-type(1) {
     flex-grow:1;
-    background: #2a4359;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 0px;
     margin: 0px 0px;
     padding: 0px 0px;
     text-align:left;
   }
   
   .register_section_css .container  .box:nth-of-type(2) {
-    flex-grow:3;
-  background: #2a4359;
+  flex-grow:3;
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -47,11 +42,13 @@
   }
   
   .register_section_css .container  .box:nth-of-type(3) {
-    flex-grow:1;
-  background: #2a4359;
+  flex-grow:1;
   color: #fff;
   border-radius: 10px;
   margin: 0px 0px;
   padding: 0px 0px;
   text-align:left;
   }
+
+
+
