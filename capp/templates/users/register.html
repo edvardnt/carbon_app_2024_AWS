@@ -1,11 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
+<html>
+<head>
+<style>
+body {
+  background-image: url('https://www.timeforkids.com/wp-content/uploads/2018/08/GlobalWarming-HERO.jpg');
+  background-size: cover;
+}
+</style>
+</head> 
+</html>
 
 <section class="register_section_css">
     <div class="container">
             <div class="box">
 
             </div>
+
             <div class="box">
                 <form method="POST" action="">
                     {{ form.hidden_tag() }}
