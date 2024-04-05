@@ -24,7 +24,7 @@
   
   .register_section_css .container  .box:nth-of-type(2) {
   flex-grow:3;
-  background-color: rgba(42, 67, 89, 0.4);
+  background-color: rgba(42, 67, 89, 0.8);
   color: #fff;
   border-radius: 30px;
   margin: 20px 10px;
