@@ -34,6 +34,7 @@
   
   .register_section_css .container  .box:nth-of-type(2) {
   flex-grow:3;
+  background-color: rgba(42, 67, 89, 0.4);
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -41,14 +42,3 @@
   text-align:center;
   }
   
-  .register_section_css .container  .box:nth-of-type(3) {
-  flex-grow:1;
-  color: #fff;
-  border-radius: 10px;
-  margin: 0px 0px;
-  padding: 0px 0px;
-  text-align:left;
-  }
-
-
-
