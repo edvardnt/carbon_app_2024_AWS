@@ -39,32 +39,47 @@
         
     </head>
     <body>
-    <section class="section_carbon_app_navbar"
+   <section class="section_carbon_app_navbar"
         <div class="container">
           <div class="carbon_app_navbar">
             <h1 class="logo">
-              <a href="{{url_for('carbon_app.carbon_app_home')}}">CarbonCare <span class="text-logo"><i class="fa-solid fa-calculator"></i> </span> </a>
+              <a href="{{url_for('carbon_app.carbon_app_home')}}"><span class="text-logo"><i class="fa-solid fa-calculator"></i> </span> </a>
             </h1>
+            {% if current_user.is_authenticated %}
             <nav>
                <ul>
                 <li>
-                 <a href="{{url_for('methodology.methodology_home')}}">Methodology </a><i class="fa-solid fa-pencil"></i>
+                 <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
                 </li>
                 <li>
-                  <a href="{{url_for('about_us.about_us_home')}}">About Us </a><i class="fa-solid fa-people-group"></i>
+                  <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
                 </li>
                 <li>
-                  <a href="{{url_for('users.login')}}">Login </a><i class="fa-solid fa-arrow-right-to-bracket"></i>
-                </li>
-                <li>
-                  <a href="{{url_for('users.register')}}">Register </a><i class="fa-regular fa-address-card"></i>
+                  <a href="{{url_for('users.logout')}}">Logout</a>
                 </li>
               </ul>
             </nav>
+            {% else %}
+            <nav>
+              <ul>
+               <li>
+                <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+               </li>
+               <li>
+                 <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
+               </li>
+               <li>
+                 <a href="{{url_for('users.login')}}">Login</a>
+               </li>
+               <li>
+                 <a href="{{url_for('users.register')}}">Register</a>
+               </li>
+             </ul>
+           </nav>
+           {% endif %}
           </div>
         </div>
-    </section> 
-
+      </section>  
         {% block content %} {% endblock %}
 
 
