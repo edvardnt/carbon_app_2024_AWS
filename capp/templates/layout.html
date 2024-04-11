@@ -43,19 +43,19 @@
         <div class="container">
           <div class="carbon_app_navbar">
             <h1 class="logo">
-              <a href="{{url_for('carbon_app.carbon_app_home')}}"><span class="text-logo"><i class="fa-solid fa-calculator"></i> </span> </a>
+              <a href="{{url_for('carbon_app.carbon_app_home')}}">CarbonCare <span class="text-logo"><i class="fa-solid fa-calculator"></i> </span> </a>
             </h1>
             {% if current_user.is_authenticated %}
             <nav>
                <ul>
                 <li>
-                 <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                 <a href="{{url_for('methodology.methodology_home')}}">Methodology <i class="fa-regular fa-newspaper"></i></a>
                 </li>
                 <li>
-                  <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
+                  <a href="{{url_for('about_us.about_us_home')}}">About Us <i class="fa-solid fa-people-group"></i></a>
                 </li>
                 <li>
-                  <a href="{{url_for('users.logout')}}">Logout</a>
+                  <a href="{{url_for('users.logout')}}">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                 </li>
               </ul>
             </nav>
@@ -63,16 +63,16 @@
             <nav>
               <ul>
                <li>
-                <a href="{{url_for('methodology.methodology_home')}}">Methodology</a>
+                <a href="{{url_for('methodology.methodology_home')}}">Methodology <i class="fa-regular fa-newspaper"></i></a>
                </li>
                <li>
-                 <a href="{{url_for('about_us.about_us_home')}}">About Us</a>
+                 <a href="{{url_for('about_us.about_us_home')}}">About Us </a><i class="fa-solid fa-people-group"></i>
                </li>
                <li>
-                 <a href="{{url_for('users.login')}}">Login</a>
+                 <a href="{{url_for('users.login')}}">Login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                </li>
                <li>
-                 <a href="{{url_for('users.register')}}">Register</a>
+                 <a href="{{url_for('users.register')}}">Register <i class="fa-regular fa-address-card"></i></a>
                </li>
              </ul>
            </nav>
