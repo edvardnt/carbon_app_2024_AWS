@@ -15,6 +15,7 @@ def register():
       user = User(username=form.username.data, email=form.email.data, password=user_hashed_password)
       db.session.add(user)
       db.session.commit()
+      login_user(user, remember=True)
       flash('Your account has been created! Now, you are able to login!', 'success')
       return redirect(url_for('carbon_app.carbon_app_home'))
   return render_template('users/register.html', title='register', form=form)
