@@ -28,19 +28,19 @@ p {
 
 .developers {
   display: flex;  
-  align-items: start;
+  flex-wrap: wrap;
   background: #2a4359;
+  justify-content: space-between;
 }
 .developers .box {
   flex: 1;
   background: rgba(76, 127, 182, 0.923) ;
   color: white;
   border-radius: 10px;
-  margin: 20px 10px;
+  margin: 10px;
   padding: 15px 20px;
   text-align:center;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
 }
 .developers .box:nth-of-type(1) {
   flex-grow:4;
@@ -89,43 +89,33 @@ p {
   align-items: center;
   flex-wrap:wrap;
   padding: 0px 0px;
-  margin: 0px 0px;
+  margin: 20px 0px;
 }
 .btn_developers {
-  padding: 10px 10px;
-  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  margin: 10px;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
   background-color: #2a4359;
   border: 0px solid  #c5c8d9;
-  padding: 10px;
 }
 .btn_developers:hover {
-  color: #fff;
   background-color: #b9bac0;
   border: 2px solid #c5c8d9;
-  text-decoration: none;
 }
 
-@media (max-width:768px) { 
-  .header_home {
-    flex-direction: column;
-  } 
-  .developers {
-    flex-direction: column;
-  } 
-  .section_container_buttons_developers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+  .developers .box {
+    flex-basis: calc(50% - 20px); /* Two boxes per row */
   }
-}
 
-img.developer-photo {
-  width: 200px;
-  height: 210px;
-  border-radius: 50%;
-  object-fit: cover; 
+  .section_container_buttons_developers {
+    margin-top: 20px;
+  }
+
+  .btn_developers {
+    flex-basis: calc(50% - 20px); /* Two buttons per row */
+  }
 }
