@@ -39,10 +39,10 @@
   /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
   .register_section_css .container .box {
-    flex-basis: 100%; /* Make boxes take up full width on smaller screens */
+    flex-basis: 100%; 
     margin: 5px 5px;
   }
 .register_section_css .container {
-  margin: 0 auto; /* Center container on smaller screens */
+  margin: 0 auto; 
 }
 }
