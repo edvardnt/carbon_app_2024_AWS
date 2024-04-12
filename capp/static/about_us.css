@@ -116,6 +116,5 @@ p {
 
   .btn_developers {
     flex-basis: calc(50% - 20px); /* Two buttons per row */
-    margin: 5px; /* Reduced margin */
   }
 }
