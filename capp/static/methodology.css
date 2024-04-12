@@ -71,25 +71,27 @@ ol {
   color:#fff ;
   margin: 20px 20px;
   margin-bottom: 0px;
+  padding: 10px;
 }
 .methodology {
   display: flex;  
   align-items: center;
   background: #2a4359;
-  margin: 20px 20px;
   margin-bottom: 0px;
-  padding: 10px;
+  padding: 0px;
 }
 
 
 /* Table with two columns */
 .methodology .box_table2 {
   flex: 1;
+  width: 100%; /* Set the width to 100% */
+  max-width: 100%; /* Allow the box to shrink */
   background: rgba(76, 127, 182, 0.923);
   color: #fff;
   border-radius: 45px;
-  margin: 10px 10px 10px 5px;
-  padding: 10px 10px;
+  margin: 10px 10px;
+  padding: 10px;
   list-style: none;
   text-align: start;
   align-items: end;
@@ -104,13 +106,20 @@ ol {
   background: rgba(76, 127, 182, 0.923);
 }
 
-
-@media (max-width:768px) { 
+@media (max-width:1020px) { 
+  .section_body_methodology {
+    margin: 10px 10px;
+  }
   .header {
     flex-direction: column;
   } 
   .methodology {
     flex-direction: column;
+    margin-bottom: 0;
+    padding: 0;
   } 
+  .methodology .box_table2 {
+    margin: 10px;
+  }
 }
 
