@@ -164,7 +164,7 @@ nav a:hover::before {
     margin-right: -53px;
 }
 .navbar .logo a .text-logo {
-  margin-right: -170px; /* Set fixed spacing between CarbonCare and calculator icon */
+  margin-right: -175px; /* Set fixed spacing between CarbonCare and calculator icon */
 }
 
 .navbar .logo .fa-calculator {
