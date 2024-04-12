@@ -37,7 +37,7 @@ p {
   background: rgba(76, 127, 182, 0.923) ;
   color: white;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px 10px;
   padding: 15px 20px;
   text-align:center;
   box-sizing: border-box;
@@ -107,8 +107,14 @@ p {
 }
 
 @media (max-width: 768px) {
+  .section_developers {
+    margin-left: 10px; /* Adjust left margin */
+    margin-right: 10px; /* Adjust right margin */
+  }
+
   .developers .box {
     flex-basis: calc(50% - 20px); /* Two boxes per row */
+    margin: 5px; /* Reduced margin */
   }
 
   .section_container_buttons_developers {
@@ -117,8 +123,10 @@ p {
 
   .btn_developers {
     flex-basis: calc(50% - 20px); /* Two buttons per row */
+    margin: 5px; /* Reduced margin */
   }
 }
+
 img.developer-photo {
   width: 200px;
   height: 210px;
