@@ -22,7 +22,7 @@ p {
   background-color:#2a4359;
   color: #fff;
   padding: 20px;
-  margin: 20px 0px;
+  margin: 20px 20px;
   margin-bottom: 0%;
 }
 
@@ -116,5 +116,6 @@ p {
 
   .btn_developers {
     flex-basis: calc(50% - 20px); /* Two buttons per row */
+    margin: 5px; /* Reduced margin */
   }
 }
