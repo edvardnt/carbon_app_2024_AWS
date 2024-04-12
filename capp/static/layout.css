@@ -150,19 +150,41 @@ nav a:hover::before {
 @media(max-width:1020px){
   .navbar {
       flex-direction: column;
-      height: auto; 
+      height: 110px; 
       display: block;
-      align-items: start;
+      margin-left: -70px;
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
   }
+  .navbar .logo a {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    margin-right: -53px;
+}
+.navbar .logo a .text-logo {
+  margin-right: -170px; /* Set fixed spacing between CarbonCare and calculator icon */
+}
+
+.navbar .logo .fa-calculator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
   .navbar a {
     flex-direction: column;
     position: relative; 
   }
   .navbar ul {
-      flex-direction: column;
+      flex-direction: row; /* Center vertically */
+      justify-content: center;
   }
   .navbar ul li {
-    margin-left: 10px;
+    margin-left: 50px;
+    font-size: 13px;
+    align-items: center;
   }
 
   nav a {
