@@ -107,6 +107,9 @@ ol {
 }
 
 @media (max-width:1020px) { 
+  .text-logo {
+    margin-left: -20px;
+  }
   .section_body_methodology {
     margin: 10px 10px;
   }
