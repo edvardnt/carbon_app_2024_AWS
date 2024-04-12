@@ -2,10 +2,12 @@
 /*color=dark*/
 .register_section_css {
   display: flex;
+  flex-wrap: wrap;
   }
   
   .register_section_css .container {
   display: flex;
+  flex-wrap: wrap;
   }
   
   .register_section_css .container {
@@ -13,9 +15,11 @@
     align-items: start;
     justify-content: space-between;
   }
-      /*color=dark*/
+  
+  /* Adjust box sizing */
   .register_section_css .container .box {
     flex: 1;
+    margin: 10px;
   }
   
   .register_section_css .container  .box:nth-of-type(1) {
@@ -31,3 +35,10 @@
   padding: 10px 20px;
   text-align:center;
   }
+
+  /* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .register_section_css .container .box {
+    flex-basis: 100%; /* Make boxes take up full width on smaller screens */
+  }
+}
