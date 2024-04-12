@@ -119,3 +119,9 @@ p {
     flex-basis: calc(50% - 20px); /* Two buttons per row */
   }
 }
+img.developer-photo {
+  width: 200px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
