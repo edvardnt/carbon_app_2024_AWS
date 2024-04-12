@@ -114,7 +114,6 @@ p {
 
   .developers .box {
     flex-basis: calc(50% - 20px); /* Two boxes per row */
-    margin: 5px; /* Reduced margin */
   }
 
   .section_container_buttons_developers {
@@ -123,7 +122,6 @@ p {
 
   .btn_developers {
     flex-basis: calc(50% - 20px); /* Two buttons per row */
-    margin: 5px; /* Reduced margin */
   }
 }
 
