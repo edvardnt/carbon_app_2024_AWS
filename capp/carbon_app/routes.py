@@ -3,18 +3,19 @@ from capp.models import Transport
 from capp import db
 from datetime import timedelta, datetime
 from flask_login import login_required, current_user
-from capp.carbon_app.forms import BusForm, CarForm, PlaneForm, FerryForm, MotorbikeForm, BicycleForm, WalkForm
+from capp.carbon_app.forms import BusForm, CarForm, PlaneForm, FerryForm, MotorbikeForm, BicycleForm, WalkForm, TrainForm 
 import json
 
 carbon_app = Blueprint('carbon_app', __name__)
 
 # Emissions factor per transport in kg per passenger km
 efco2 = {
-    'Bus': {'Diesel': 0.10231, 'CNG': 0.08, 'Petrol': 0.10231, 'No Fossil Fuel': 0},
-    'Car': {'Petrol': 0.18592, 'Diesel': 0.16453, 'No Fossil Fuel': 0},
+    'Bus': {'Diesel': 0.025, 'Electric': 0.013, 'Biodiesel': 0.007},
+    'Car': {'Old Petrol': 0.156, 'New Petrol': 0.139, 'Old Diesel': 0.130, 'New Diesel': 0.122, 'Small Electric': 0.012, 'Medium Electric': 0.016, 'Large Electric': 0.020},
     'Plane': {'Petrol': 0.24298},
-    'Ferry': {'Diesel': 0.11131, 'CNG': 0.1131, 'No Fossil Fuel': 0},
-    'Motorbike': {'Petrol': 0.09816, 'No Fossil Fuel': 0},
+    'Ferry': {'Diesel': 0.226, 'Electric': 0.00525},
+    'Motorbike': {'Petrol': 0.114},
+    'Train':{'Diesel':0.091, 'Electric':0.024},
     'Bicycle': {'No Fossil Fuel': 0},
     'Walk': {'No Fossil Fuel': 0}
 }
@@ -53,23 +54,35 @@ def your_data():
 
     if 'Bus' in second_tuple_elements:
         index_bus = second_tuple_elements.index('Bus')
-        emission_transport[1] = first_tuple_elements[index_bus]
+        emission_transport[0] = first_tuple_elements[index_bus]
 
     if 'Car' in second_tuple_elements:
         index_car = second_tuple_elements.index('Car')
-        emission_transport[2] = first_tuple_elements[index_car]
+        emission_transport[1] = first_tuple_elements[index_car]
 
     if 'Ferry' in second_tuple_elements:
         index_ferry = second_tuple_elements.index('Ferry')
-        emission_transport[3] = first_tuple_elements[index_ferry]
+        emission_transport[2] = first_tuple_elements[index_ferry]
 
     if 'Motorbike' in second_tuple_elements:
         index_motorbike = second_tuple_elements.index('Motorbike')
-        emission_transport[4] = first_tuple_elements[index_motorbike]
+        emission_transport[3] = first_tuple_elements[index_motorbike]
 
     if 'Plane' in second_tuple_elements:
         index_plane = second_tuple_elements.index('Plane')
-        emission_transport[5] = first_tuple_elements[index_plane]
+        emission_transport[4] = first_tuple_elements[index_plane]
+
+    if 'Train' in second_tuple_elements:
+        index_train = second_tuple_elements.index('Train')
+        emission_transport[5] = first_tuple_elements[index_train]
+
+    if 'Bicycle' in second_tuple_elements:
+        index_bicycle = second_tuple_elements.index('Bicycle')
+        emission_transport[6] = first_tuple_elements[index_bicycle]
+
+    if 'Walk' in second_tuple_elements:
+        index_walk = second_tuple_elements.index('Walk')
+        emission_transport[7] = first_tuple_elements[index_walk]
 
     # Kilometers by category
     kms_by_transport = db.session.query(db.func.sum(Transport.kms), Transport.transport). \
@@ -82,33 +95,33 @@ def your_data():
         first_tuple_elements.append(a_tuple[0])
         second_tuple_elements.append(a_tuple[1])
 
-    if 'Bicycle' in second_tuple_elements:
-        index_bicycle = second_tuple_elements.index('Bicycle')
-        kms_transport[0] = first_tuple_elements[index_bicycle]
-
     if 'Bus' in second_tuple_elements:
         index_bus = second_tuple_elements.index('Bus')
-        kms_transport[1] = first_tuple_elements[index_bus]
+        kms_transport[0] = first_tuple_elements[index_bus]
 
     if 'Car' in second_tuple_elements:
         index_car = second_tuple_elements.index('Car')
-        kms_transport[2] = first_tuple_elements[index_car]
+        kms_transport[1] = first_tuple_elements[index_car]
 
     if 'Ferry' in second_tuple_elements:
         index_ferry = second_tuple_elements.index('Ferry')
-        kms_transport[3] = first_tuple_elements[index_ferry]
+        kms_transport[2] = first_tuple_elements[index_ferry]
 
     if 'Motorbike' in second_tuple_elements:
         index_motorbike = second_tuple_elements.index('Motorbike')
-        kms_transport[4] = first_tuple_elements[index_motorbike]
+        kms_transport[3] = first_tuple_elements[index_motorbike]
 
     if 'Plane' in second_tuple_elements:
         index_plane = second_tuple_elements.index('Plane')
-        kms_transport[5] = first_tuple_elements[index_plane]
+        kms_transport[4] = first_tuple_elements[index_plane]
 
-    if 'Scooter' in second_tuple_elements:
-        index_scooter = second_tuple_elements.index('Scooter')
-        kms_transport[6] = first_tuple_elements[index_scooter]
+    if 'Train' in second_tuple_elements:
+        index_train = second_tuple_elements.index('Train')
+        kms_transport[5] = first_tuple_elements[index_train]
+
+    if 'Bicycle' in second_tuple_elements:
+        index_bicycle = second_tuple_elements.index('Bicycle')
+        kms_transport[6] = first_tuple_elements[index_bicycle]
 
     if 'Walk' in second_tuple_elements:
         index_walk = second_tuple_elements.index('Walk')
@@ -283,6 +296,27 @@ def new_entry_plane():
         return redirect(url_for('carbon_app.your_data'))
     return render_template('/carbon_app/new_entry_plane.html', title='new_entry_plane', form=form)
 
+@carbon_app.route('/carbon_app/new_entry_train', methods=['GET', 'POST'])
+@login_required
+def new_entry_train():
+    form = TrainForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Train'
+
+        co2 = float(kms) * efco2[transport][fuel]
+        total = co2
+
+        co2 = float("{:.2f}".format(co2))
+        total = float("{:.2f}".format(total))
+
+        emissions = Transport(kms=kms, transport=transport, fuel=fuel, co2=co2, total=total, author=current_user)
+        db.session.add(emissions)
+        db.session.commit()
+        return redirect(url_for('carbon_app.your_data'))
+    return render_template('/carbon_app/new_entry_train.html', title='new_entry_train', form=form)
+
 
 @carbon_app.route('/carbon_app/new_entry_bicycle', methods=['GET', 'POST'])
 @login_required
@@ -303,4 +337,4 @@ def new_entry_bicycle():
         db.session.add(emissions)
         db.session.commit()
         return redirect(url_for('carbon_app.your_data'))
-    return render_template('/carbon_app/new_entry_bicyle.html', title='new_entry_bicycle', form=form)
+    return render_template('/carbon_app/new_entry_bicycle.html', title='new_entry_bicycle', form=form)
