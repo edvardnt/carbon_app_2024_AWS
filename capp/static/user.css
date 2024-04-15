@@ -35,6 +35,12 @@
   padding: 10px 20px;
   text-align:center;
   }
+  .register_section_css .container a {
+    color: lightskyblue
+  }
+  .register_section_css .container a:hover {
+    color: black;
+  }
 
   /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
