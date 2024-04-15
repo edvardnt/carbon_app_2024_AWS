@@ -8,10 +8,10 @@
           <div class="box">
 
           </div>
-          <div class="box", style=background-color:#35628f;> 
+          <div class="box" style=background-color:#c5c8d9;> 
               <div class="container_buttons_links_main_menu">
                   <div class="btn">
-                      <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="btn_carbon_app_new_entry_main">New Entry</a>
+                      <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="btn_carbon_app_new_entry_main",  style=background-color:#35628f;>New entry</a>
                   </div>   
               </div>        
           </div>
@@ -49,8 +49,8 @@
     <!-- Table Section -->
     <section class="table_main">
     <div class="container">
-        <div class="box", style=background-color:#35628f;>
-
+        <div class="box", style=background-color:#35628f>
+            
         </div>
         <div class="box", style=background-color:#35628f;>   
             {% with messages = get_flashed_messages(with_categories=true) %}
@@ -62,7 +62,7 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}         
-            <table class="table">
+            <table class="table", style=background-color:white>
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">User</th>
@@ -84,7 +84,6 @@
                             <td>{{ entry.transport }}</td>
                             <td>{{ entry.fuel }}</td>
                             <td>{{ entry.co2 }}</td>
-                            <td>{{ entry.ch4 }}</td>
                             <td>{{ entry.total }}</td>
                             <td><a href="{{ url_for('carbon_app.delete_emission', entry_id = entry.id) }}" class="btn btn-outline-danger btn-sm">Delete</a></td>
                         </tr>
@@ -113,7 +112,7 @@
         let emissions_by_transport_chart = new Chart(emissions_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Scooter', 'Walk'],
+                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Train', 'Walk'],
                     datasets: [{
                         data: emission_transport_data,
                         backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
@@ -122,7 +121,6 @@
                         borderWidth: 1,
                         hoverBorderColor: "black",
                         hoverBorderWidth: 2,
-                        hoverBackgroundColor: 'rgba(154, 245, 140)',
                         pointHoverRadius: 5
                     }],
                 },
@@ -130,13 +128,13 @@
                         title: {
                             display: true,
                                 text: "Emissions by type of transport (5 last days)",
-                                    fontColor: "black",
+                                    fontColor: "white",
                                     fontSize: 20,
                         },
                         legend: {
                             position: "right",
                                 labels: {
-                                fontColor: "black"
+                                fontColor: "white"
                             },
                             display: true,
                         },
@@ -160,7 +158,7 @@
                         label: "Individual Emissions (5 past days)",                           
                         data: over_time_emissions,
                         fill: false,
-                        borderColor: '#5fd9cd',
+                        borderColor: 'white',
                         lineTension: 0.1
                         }
                 ]
@@ -178,16 +176,15 @@
         let kms_by_transport_chart = new Chart(kms_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Walk'],
+                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Train', 'Plane', 'Walk'],
                     datasets: [{
                         label: "Income Vs Expenses",
                         data: kms_transport_data,
                         backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
                             '#f2935c', '#5fd9cd', '#f2d95c', '#f2b84b', '#f27979' ],    
                         borderWidth: 1,
-                        hoverBorderColor: "black",
+                        hoverBorderColor: "white",
                         hoverBorderWidth: 2,
-                        hoverBackgroundColor: 'rgba(154, 245, 140)',
                         pointHoverRadius: 5
                     }],
                 },
@@ -195,13 +192,13 @@
                         title: {
                             display: true,
                                 text: "Kilometers by type of transport (5 last days)",
-                                fontColor: "black",
+                                fontColor: "white",
                                 fontSize: 20,
                         },
                         legend: {
                             position: "right",
                                 labels: {
-                                fontColor: "black"
+                                fontColor: "white"
                             },
                             display: true,
                         },
@@ -225,7 +222,7 @@
                         label: "Individual Kilometers (5 past days)",                            
                         data: over_time_kms,
                         fill: false,
-                        borderColor: '5fd9cd',
+                        borderColor: 'white',
                         lineTension: 0.1
                         }
                 ]
@@ -234,5 +231,15 @@
             });   
 
         </script>
+
+   <div class="container">
+        <div class="footer">
+            <h1> 
+                <a href="#">
+                    <i class="fa-solid fa-circle-up" style="color:#35628f"> Back to top</i>
+                </a>
+            </h1>
+        </div>
+
     {% endblock%}        
 {% endblock content %}
