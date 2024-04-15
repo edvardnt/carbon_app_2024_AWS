@@ -102,8 +102,7 @@ p {
   border: 0px solid  #c5c8d9;
 }
 .btn_developers:hover {
-  background-color: #b9bac0;
-  border: 2px solid #c5c8d9;
+  background-color: #fff;
 }
 
 @media (max-width: 768px) {
