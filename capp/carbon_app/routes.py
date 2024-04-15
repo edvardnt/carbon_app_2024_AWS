@@ -15,7 +15,7 @@ efco2 = {
     'Plane': {'Long-haul Economy Class': 0.102, 'Long-haul Business class':0.306, 'Long-haul First class':0.408, 'Short-haul Economy class':0.133,'Short-haul Business class':0.399, 'Short-haul First class':0.532},
     'Ferry': {'Diesel': 0.226, 'Electric': 0.00525},
     'Motorbike': {'Petrol': 0.114},
-    'Train':{'Diesel':0.091, 'Electric Nordic':0.0, 'Electric European': 0.024},
+    'Train':{'Diesel':0.091, 'Electric Nordic':0.007 , 'Electric European': 0.024},
     'Bicycle': {'No Fossil Fuel': 0},
     'Walk': {'No Fossil Fuel': 0}
 }
