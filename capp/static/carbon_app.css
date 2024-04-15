@@ -113,13 +113,11 @@ h4 {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #2a4359
+  background-color: #2a4359;
+  transition: background-color 0,3s;
 }
 .btn_carbon_app_new_entry_main:hover {
-  color: #fff;
-  background-color: #2a4359;
-  border: 2px solid #2a4359;
-  text-decoration: none;
+  background-color: #fff !important;
 }
 /*Container new_entry */
 .new_entry {
@@ -338,4 +336,9 @@ h4 {
     width: auto;
     margin: 20px 10px;
   }
+  .section_carbon_app_new_entry_main {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
 }
