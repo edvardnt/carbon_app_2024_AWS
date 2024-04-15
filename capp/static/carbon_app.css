@@ -13,7 +13,6 @@ p {
 h4 {
   font-size: 18px;
   text-align: left;
-  font-weight: bold;
 }
 /* Section header */
 .section_header_carbon_app {
@@ -48,12 +47,12 @@ h4 {
   flex-wrap:wrap;
 }
 .container_buttons_links_header_carbon_app a:hover {
-  color: #466fa6;
+  color: #2a4359;
 }
 .container_buttons_links_header_carbon_app btn {
   width: 100px;
   height: 100px;
-  background: #466fa6;
+  background: #2a4359;
   color: #fff;
   display: flex;
   justify-content:center;
@@ -61,17 +60,22 @@ h4 {
 }
 /* Section carbon_app_new_entry_main */
 .section_carbon_app_new_entry_main {
-  background-color:#c5c8d9;
+  background: #2a4359;
+  margin: 20px 20px;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 0%;
+  font-family: 'Roboto', sans-serif;
 }
 .carbon_app_new_entry_main {
   display: flex;  
   align-items: start;
-  background: #c5c8d9;
+  background-color: #2a4359;
 }
 .carbon_app_new_entry_main .box {
   flex: 1;
-  background: #2a4359;
-  color: black;
+  background:rgba(76, 127, 182, 0.923) ;
+  color: white;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -106,8 +110,7 @@ h4 {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #2a4359;
-  border: 2px solid  #2a4359;
+  background-color: #2a4359
 }
 .btn_carbon_app_new_entry_main:hover {
   color: #fff;
@@ -152,7 +155,7 @@ h4 {
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
-  text-align:center;
+  text-align: center;
 }  
 .new_entry .container  .box:nth-of-type(3) {
   flex-grow:1;
