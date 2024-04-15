@@ -122,11 +122,12 @@ h4 {
 /*Container new_entry */
 .new_entry {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359;
+  height: 720px;
   }  
 .new_entry .container {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359;
 }
 .new_entry .container {
   display: flex;
@@ -135,7 +136,8 @@ h4 {
 }
 .new_entry .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: rgba(76, 127, 182, 0.923) !important;
+  color: #fff;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -152,7 +154,7 @@ h4 {
 .new_entry .container  .box:nth-of-type(2) {
   flex-grow:6;
   max-width: 450px;
-  background: #2a4359;
+  background: #fff;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -169,11 +171,13 @@ h4 {
 /*Container table_main */
 .table_main {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359;
+  margin: 20px 20px;
+  margin-bottom: 0%;
   }  
 .table_main .container {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359;
 }
 .table_main .container {
   display: flex;
@@ -182,7 +186,7 @@ h4 {
 }
 .table_main .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: rgba(76, 127, 182, 0.923) !important;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -198,7 +202,7 @@ h4 {
 }  
 .table_main .container  .box:nth-of-type(2) {
   flex-grow:6;
-  background: #2a4359;
+  background: rgba(76, 127, 182, 0.923) !important;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -212,16 +216,19 @@ h4 {
   padding: 0px 0px;
   text-align:left;
 }
+.table_main .container tr {
+  color: #fff;
+}
 /*End container table_main*/
 
 /*Container two_emissions_graphs */
 .two_emissions_graphs {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359;
   }  
 .two_emissions_graphs .container {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359;
 }
 .two_emissions_graphs .container {
   display: flex;
@@ -230,7 +237,7 @@ h4 {
 }
 .two_emissions_graphs .container .box {
   flex: 1;
-  background: #2a4359;
+  background: rgba(76, 127, 182, 0.923) !important;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -238,7 +245,7 @@ h4 {
 }  
 .two_emissions_graphs .container  .box:nth-of-type(1) {
   flex-grow:1;
-  background: #2a4359;
+  background: rgba(76, 127, 182, 0.923) !important;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -251,30 +258,24 @@ h4 {
   padding: 15px 20px;
   text-align:center;
 }  
+
 /*End container two_emissions_graphs*/
 
 /*Container main menu */
 .main_menu {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359 !important;
   }  
 .main_menu .container {
   display: flex;
-  background: #c5c8d9;
+  background: #2a4359 !important;
 }
 .main_menu .container {
   display: flex;
   align-items: start;
   justify-content: space-between;
 }
-.main_menu .container .box {
-  flex: 1;
-  background: #c5c8d9;
-  border-radius: 2px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-}  
+ 
 .main_menu .container  .box:nth-of-type(1) {
   flex-grow:1;
   background: #fff;
