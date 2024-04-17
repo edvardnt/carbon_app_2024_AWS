@@ -8,7 +8,7 @@
           <div class="box">
 
           </div>
-          <div class="box" style=background-color:#c5c8d9;> 
+          <div class="box" style=background-color:#2a4359;> 
               <div class="container_buttons_links_main_menu">
                   <div class="btn">
                       <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="btn_carbon_app_new_entry_main",  style=background-color:#35628f;>New entry</a>
@@ -163,7 +163,12 @@
                         }
                 ]
                 },                    
-                options: {}
+                options: {
+                    legend: {
+                                labels: {
+                                fontColor: "white"
+                            }
+                }
             });  
             
         // Kilometers
@@ -227,7 +232,12 @@
                         }
                 ]
                 },                    
-                options: {}
+                options: {
+                    legend: {
+                                labels: {
+                                fontColor: "white"
+                            }
+                }
             });   
 
         </script>
