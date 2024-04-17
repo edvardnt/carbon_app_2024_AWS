@@ -56,9 +56,7 @@
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}
-                        <div class="alert alert-{{ category }}">
-                            {{ message }}
-                        </div> 
+
                     {% endfor %}
                 {% endif %}
             {% endwith %}         
@@ -112,7 +110,7 @@
         let emissions_by_transport_chart = new Chart(emissions_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Train', 'Walk'],
+                labels: ['Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Train', 'Bicycle', 'Walk'],
                     datasets: [{
                         data: emission_transport_data,
                         backgroundColor: ['#9ac2be', '#f2e3b6', '#f2c299',
@@ -183,7 +181,7 @@
         let kms_by_transport_chart = new Chart(kms_by_transport, {
                 type: 'pie',
                 data: {
-                labels: ['Bicycle', 'Bus', 'Car', 'Ferry', 'Motorbike', 'Train', 'Plane', 'Walk'],
+                labels: ['Bus', 'Car', 'Ferry', 'Motorbike', 'Plane', 'Train', 'Bicycle', 'Walk'],
                     datasets: [{
                         label: "Income Vs Expenses",
                         data: kms_transport_data,
