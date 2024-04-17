@@ -260,6 +260,11 @@ h4 {
   padding: 15px 20px;
   text-align:center;
 }  
+.chart {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 
 /*End container two_emissions_graphs*/
 
@@ -338,8 +343,8 @@ h4 {
   .table_main .container .box {
     width: 100%;
     margin: 0px 0px;
+    margin-bottom: 0%;
   }
-
   .new_entry .container .box {
     width: auto;
     margin: 20px 10px;
@@ -355,5 +360,9 @@ h4 {
   .two_emissions_graphs .container .box {
     width: 100%;
     margin: 10px 0px;
+  }
+  .chart {
+    display: block;
+    margin: 10px auto;
   }
 }
