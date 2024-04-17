@@ -341,7 +341,7 @@ h4 {
     overflow-x: auto;
   }
   .table_main .container .box {
-    width: 100%;
+    width: auto;
     margin: 0px 0px;
     margin-bottom: 0%;
   }
@@ -358,11 +358,7 @@ h4 {
     align-items: center;
   }
   .two_emissions_graphs .container .box {
-    width: 100%;
+    width: auto;
     margin: 10px 0px;
-  }
-  .chart {
-    display: block;
-    margin: 10px auto;
   }
 }
