@@ -219,6 +219,8 @@ h4 {
 .table_main .container tr {
   color: #fff;
 }
+
+
 /*End container table_main*/
 
 /*Container two_emissions_graphs */
@@ -330,9 +332,14 @@ h4 {
   }
   .table_main .container {
     flex-direction: column;
-    padding: 10px;
-    text-align: center;
+    align-items: center;
+    overflow-x: auto;
   }
+  .table_main .container .box {
+    width: 100%;
+    margin: 0px 0px;
+  }
+
   .new_entry .container .box {
     width: auto;
     margin: 20px 10px;
@@ -341,5 +348,12 @@ h4 {
     margin-left: 10px;
     margin-right: 10px;
   }
-
+  .two_emissions_graphs .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .two_emissions_graphs .container .box {
+    width: 100%;
+    margin: 10px 0px;
+  }
 }
