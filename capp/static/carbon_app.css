@@ -324,9 +324,11 @@ h4 {
 @media (max-width:768px) { 
   .header_carbon_app {
     flex-direction: column;
+    width: auto;
   } 
   .carbon_app_new_entry_main {
     flex-direction: column;
+    width: auto;
   } 
   .new_entry .container {
     flex-direction: column;
@@ -334,11 +336,21 @@ h4 {
     padding: 10px;
     text-align: center;
     justify-content: center;
+    width: auto;
+  }
+  .table_main {
+    margin: 2px 2px;
   }
   .table_main .container {
     flex-direction: column;
     align-items: center;
-    overflow-x: auto;
+    justify-content: center;
+    font-size: 9px;
+    width: auto;
+  }
+  .table_main .container .table a {
+    font-size: 6px;
+    width: auto;
   }
   .table_main .container .box {
     width: auto;
@@ -352,10 +364,12 @@ h4 {
   .section_carbon_app_new_entry_main {
     margin-left: 10px;
     margin-right: 10px;
+    width: auto;
   }
   .two_emissions_graphs .container {
     flex-direction: column;
     align-items: center;
+    width: auto;
   }
   .two_emissions_graphs .container .box {
     width: auto;
